@@ -7,7 +7,7 @@ h1 {
     text-align: center;
 }
 
-#incident-count, #error-text, #incident-list-view {
+#incident-count, #error-text, #incident-list-view, #description {
     margin-left: 10%;
     margin-right: 10%;
 }

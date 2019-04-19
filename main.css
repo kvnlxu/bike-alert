@@ -8,8 +8,9 @@ h1 {
 }
 
 #incident-count, #error-text, #incident-list-view, #description {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
 }
 
 #js-form {

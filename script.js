@@ -13,6 +13,15 @@ function epochToLocal(epochTime){
     return new Date(epochTime * 1000);
 }
 
+function noIncidents(){
+    $('#incident-count').empty();
+    $('#incident-count').append(
+        `<p>There have been no incidents reported near this location in the past 30 days.</p>`
+    )
+    $('#map').addClass('hidden');
+    $('#incident-list-view').addClass('hidden');
+}
+
 function incidentListItem(title, address, occurred_at, type, description, link){
     var li =  
     `<li>
@@ -43,6 +52,10 @@ function displayIncidentList(responseJson) {
 }
 
 function displayIncidents(responseJson) {
+    if(responseJson.incidents.length == 0) {
+        noIncidents();
+        return;
+    }
     var numIncidents = responseJson.incidents.length;
     var mostCommonType;
     var mostCommonCount = 0;
@@ -106,6 +119,9 @@ function getIncidents(location) {
 }
 
 function renderMap(responseJson){
+    if(responseJson.features.length == 0){
+        return;
+    }
     var map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/light-v10',
@@ -160,6 +176,7 @@ function mapIncidents(location){
 function initializeApp(){
     $('#js-form').submit(event => {
         event.preventDefault();
+        $('#error-text').empty();
         let location = $('#js-location').val();
         getIncidents(location);
         mapIncidents(location);

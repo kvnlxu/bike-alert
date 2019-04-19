@@ -18,6 +18,7 @@ function noIncidents(){
     $('#incident-count').append(
         `<p>There have been no incidents reported near this location in the past 30 days.</p>`
     )
+    $('#incident-count').removeClass('hidden');
     $('#map').addClass('hidden');
     $('#incident-list-view').addClass('hidden');
 }

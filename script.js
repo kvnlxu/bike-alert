@@ -124,7 +124,7 @@ function renderMap(responseJson){
     }
     var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style: 'mapbox://styles/mapbox/dark-v10',
         center: responseJson.features[0].geometry.coordinates,
         zoom: 11
     });

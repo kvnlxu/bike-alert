@@ -28,7 +28,7 @@ function incidentListItem(title, address, occurred_at, type, description, link){
     `<li>
         <h2>${title}</h2>
         <p>Location: ${address}</p>
-        <p>Time of Incident: ${occurred_at}</p>
+        <p>Date of Incident: ${occurred_at}</p>
         <p>Type: ${type}</p>
         <p>Description: ${description}</p>
         <a href=${link}>Link</a>
@@ -43,7 +43,7 @@ function displayIncidentList(responseJson) {
         var incident = responseJson.incidents[i];
         var title = incident.title;
         var address = incident.address;
-        var occurred_at = epochToLocal(incident.occurred_at);
+        var occurred_at = epochToLocal(incident.occurred_at).toDateString();
         var type = incident.type;
         var description = incident.description;
         var link = incident.source.html_url;

@@ -26,12 +26,14 @@ function noIncidents(){
 function incidentListItem(title, address, occurred_at, type, description, link){
     var li =  
     `<li>
-        <h2>${title}</h2>
-        <p>Location: ${address}</p>
-        <p>Date of Incident: ${occurred_at}</p>
-        <p>Type: ${type}</p>
-        <p>Description: ${description}</p>
-        <a href=${link}>Link</a>
+        <button class="collapsible"><h2>${title}</h2></button>
+        <div class="content">
+            <p>Location: ${address}</p>
+            <p>Date of Incident: ${occurred_at}</p>
+            <p>Type: ${type}</p>
+            <p>Description: ${description}</p>
+            <a href=${link}>Link</a>
+        </div>
     </li>`;
     return li;
 }
@@ -175,6 +177,16 @@ function mapIncidents(location){
 }
 
 function initializeApp(){
+    $('#incident-list').on('click', 'button', function(event){
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        } 
+    });
+
     $('#js-form').submit(event => {
         event.preventDefault();
         $('#error-text').empty();

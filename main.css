@@ -11,6 +11,7 @@ body {
 .background{
     position: fixed;
     background-image: url("images/biking_background.jpg");
+    background-size: cover;
     top: 0;
     left: 0;
     width: 100%;

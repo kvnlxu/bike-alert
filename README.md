@@ -14,19 +14,19 @@ This information should help bikers make safer and more inform decisions in thei
 
 Initial Landing Page:
 
-![landing page](screenshots/landing.png?raw=true)
+![landing page](screenshots/landing.PNG)
 
 Address submitted, displays number of incidents and the most common type of incident
 
-![address submitted](screenshots/addressSubmitted.png?raw=true)
+![address submitted](screenshots/addressSubmitted.PNG)
 
 Map View of Incidents:
 
-![map](screenshots/map.png?raw=true)
+![map](screenshots/map.PNG)
 
 List View of Incidents:
 
-![list](screenshots/list.png?raw=true)
+![list](screenshots/list.PNG)
 
 
 ##Technology

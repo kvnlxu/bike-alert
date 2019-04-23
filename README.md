@@ -1,16 +1,16 @@
 ## Bike Alert
 
-##Live Web Page
+## Live Web Page
 
 [Live](https://kvnlxu.github.io/bike-alert/)
 
-##Summary
+## Summary
 
 This is a web application that displays reported bike incidents near a location.
 Users can submit an address or a city and find reported incidents that are up to 30 days old.
 This information should help bikers make safer and more inform decisions in their everyday commute.
 
-##Screenshots of Application
+## Screenshots of Application
 
 Initial Landing Page:
 
@@ -29,7 +29,7 @@ List View of Incidents:
 ![list](screenshots/list.PNG)
 
 
-##Technology
+## Technology
 
 HTML/CSS/JavaScript/jQuery
 

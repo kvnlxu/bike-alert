@@ -41,12 +41,11 @@ h1 {
 #js-location {
     height: 60px;
     font-size: 32px;
-    width: 70%;
+    width: 60%;
     border: 1px solid black;
 }
 
 #js-form button {
-    text-align: center;
     width: 20%;
     height:60px;
     background: #2196F3;

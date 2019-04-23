@@ -5,24 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bike Alert</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
     <link rel="stylesheet" href="main.css">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Paytone+One" rel="stylesheet">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
     <h1>Bike Alert</h1>
-    <div id='description'>
-        <p>Enter an address or a city below to get bike related incidents reported near that location.</p>
-    </div>
     <form id="js-form">
-        <input type="text" name="location" id="js-location">
-        <input type="submit" value="Submit">
+        <input type="text" name="location" id="js-location" placeholder="Enter an Address or City">
+        <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    <div id="error-text"></div>
+    <div id='description'>
+            <p>Bike Alert is a service that find bike related incidents reported near you.
+            Submit an address or city above to display reports that are up to 30 days old.</p>
+    </div>
+    <div id="error-text hidden"></div>
     <div id="incident-count" class="hidden"></div>
-    <div id="map container">
+    <div id="map-container">
         <div id="map" class="hidden"></div>
     </div>
     <div id="incident-list-view" class="hidden">

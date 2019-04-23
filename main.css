@@ -1,27 +1,83 @@
 body {
     margin: 0;
     padding: 0;
+    background-image: url("biking_background.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
 }
 
 h1 {
+    font-family: 'Paytone One', sans-serif;
     text-align: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-size: 54px;
 }
 
 #incident-count, #error-text, #incident-list-view, #description {
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    width: 100%;
+    margin-bottom: 80px;
+}
+
+#description {
+    font-size: 20px;
 }
 
 #js-form {
     text-align: center;
+    margin-bottom: 80px;
+}
+
+#js-location {
+    height: 60px;
+    font-size: 32px;
+    width: 70%;
+    border: 1px solid black;
+}
+
+#js-form button {
+    width: 20%;
+    height:60px;
+    background: #2196F3;
+    color: white;
+    font-size: 32px;
+    border: 1px solid black;
+    border-left: none; /* Prevent double borders */
+    cursor: pointer;
+}
+
+#js-form button:hover {
+    background: #0b7dda;
+}
+
+#error-message {
+    background-color: #ff6ea9;
+    color: black;
+    text-align: center;
+    font-size: 17px;
+    opacity: 0.8;
+    border: 3px dashed #FF0000;
+}
+
+#incident-count {
+    background-color: #C2E1C2;
+    color: black;
+    text-align: center;
+    font-size: 17px;
+    opacity: 0.8;
+    border: 3px dashed #7DCD85;
 }
 
 #map{
     margin-left: auto;
     margin-right: auto;
-    width: 700px;
-    height: 500px;
+    width: 80%;
+    height: 300px;
+    margin-bottom: 100px;
+    color: black;
 }
 
 .marker {
@@ -46,15 +102,31 @@ h1 {
     display: none;
 }
 
-ul {
+#incident-list {
     list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+}
+
+#incident-list-view > h2 {
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #7DCD85;
+    color: white;
+}
+
+#incident-list li {
+    border-bottom: 1px solid black;
 }
 
 .collapsible {
     background-color: #eee;
     color: #444;
     cursor: pointer;
-    padding: 18px;
+    padding: 10px;
     width: 100%;
     border: none;
     text-align: left;
@@ -69,9 +141,32 @@ ul {
 .content {
     padding: 0 18px;
     background-color: white;
+    color: black;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+@media screen and (min-width: 800px){
+    #incident-count, #error-text, #incident-list-view, #description {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 800px;
+        margin-bottom: 80px;
+    }
+
+    #js-location {
+        width: 500px;
+    }
+
+    #js-form button {
+        width: 90px;
+    }
+
+    #map{
+        width: 700px;
+        height: 500px;
+    }
 }
 
 .hidden {

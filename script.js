@@ -26,13 +26,14 @@ function noIncidents(){
 function incidentListItem(title, address, occurred_at, type, description, link){
     var li =  
     `<li>
-        <button class="collapsible"><h2>${title}</h2></button>
+        <button class="collapsible"><h2>${occurred_at.toDateString()}: ${title}</h2></button>
         <div class="content">
             <p>Location: ${address}</p>
-            <p>Date of Incident: ${occurred_at}</p>
+            <p>Time of Incident: ${occurred_at}</p>
             <p>Type: ${type}</p>
             <p>Description: ${description}</p>
-            <a href=${link}>Link</a>
+            <a href=${link}>View details</a>
+            <br><br>
         </div>
     </li>`;
     return li;
@@ -45,7 +46,7 @@ function displayIncidentList(responseJson) {
         var incident = responseJson.incidents[i];
         var title = incident.title;
         var address = incident.address;
-        var occurred_at = epochToLocal(incident.occurred_at).toDateString();
+        var occurred_at = epochToLocal(incident.occurred_at);
         var type = incident.type;
         var description = incident.description;
         var link = incident.source.html_url;
@@ -82,7 +83,7 @@ function displayIncidents(responseJson) {
     if(mostCommonType){
         $('#incident-count').append(
             `<p>
-                ${mostCommonCount} of the reported incidents last month are ${mostCommonType.toLowerCase()}.
+                ${mostCommonCount} of those reported incidents are ${mostCommonType.toLowerCase()}.
             </p>`
         )
     }

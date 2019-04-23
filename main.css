@@ -39,13 +39,13 @@ h1 {
 }
 
 #js-form button {
+    text-align: center;
     width: 20%;
     height:60px;
     background: #2196F3;
     color: white;
     font-size: 32px;
     border: 1px solid black;
-    border-left: none; /* Prevent double borders */
     cursor: pointer;
 }
 

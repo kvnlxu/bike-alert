@@ -16,24 +16,26 @@
 </head>
 <body>
     <div class="background"></div>
-    <h1>Bike Alert</h1>
-    <form id="js-form">
+    <header><h1>Bike Alert</h1></header>
+    <form id="js-form" role="search">
         <input type="text" name="location" id="js-location" placeholder="Enter an Address or City">
         <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-    <div id='description'>
+    <main>
+        <article id='description'>
             <p>Bike Alert is a service that find bike related incidents reported near you.
             Submit an address or city above to display reports that are up to 30 days old.</p>
-    </div>
-    <div id="error-text hidden"></div>
-    <div id="incident-count" class="hidden"></div>
-    <div id="map-container">
-        <div id="map" class="hidden"></div>
-    </div>
-    <div id="incident-list-view" class="hidden">
-        <h2>Incidents List</h2>
-        <ul id="incident-list"></ul>
-    </div>
+        </article>
+        <article id="error-text hidden"></article>
+        <article id="incident-count" class="hidden"></article>
+        <article id="map-container">
+            <div id="map" class="hidden"></div>
+        </article>
+        <article id="incident-list-view" class="hidden">
+            <h2>Incidents List</h2>
+            <ul id="incident-list"></ul>
+        </article>
+    </main>
     <script src="script.js"></script>
 </body>
 </html>
